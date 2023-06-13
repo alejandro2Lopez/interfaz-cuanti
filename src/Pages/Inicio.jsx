@@ -98,7 +98,7 @@ const Inicio = () => {
     <>
       <br />
       <div className="d-flex justify-content-center align-items-center">
-        <img src={require('./Logo.png')} width="90" height="90" />
+        <img src={require('../Graficos/Logo.png')} width="90" height="90" />
         <h1>GreenTech</h1>
 
 

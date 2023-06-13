@@ -14,7 +14,7 @@ const GraficoResiduos = () => {
     <>
       <br />
       <div className="d-flex justify-content-center align-items-center">
-        <img src={require('./Logo.png')} width="90" height="90" />
+        <img src={require('../Graficos/Logo.png')} width="90" height="90" />
         <h1>GreenTech</h1>
 
 
@@ -24,7 +24,7 @@ const GraficoResiduos = () => {
         <div class="row">
           <div class="col-sm-9 bg p-3">
             <div className="d-flex justify-content-center align-items-center">
-              <img src={require('./GraResiduos.png')} width="80%" height="80%" />
+              <img src={require('../Graficos/GraResiduos.png')} width="80%" height="80%" />
             </div>
             <div class="container">
               <div class="row">
