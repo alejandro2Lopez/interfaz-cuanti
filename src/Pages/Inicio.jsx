@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faSubtract } from '@fortawesome/free-solid-svg-icons'
-import { Navigate, useNavigate } from "react-router-dom";
+import { faPlus, faSubtract, faCheck } from '@fortawesome/free-solid-svg-icons'
+
+import { useNavigate } from "react-router-dom";
+import '../assets/buttonFile.css'
 const Inicio = () => {
   const [rows, setRows] = useState([0]);
   const [rows1, setRows1] = useState([0]);
   const [rows2, setRows2] = useState([0]);
   const navigate = useNavigate();
+  const [validar1, setValidar1] = useState(false)
+  const [validar2, setValidar2] = useState(false)
+  const [validar3, setValidar3] = useState(false)
   const [refresh, setRefresh] = useState(true)
+  function comprobar() {
+
+    var pagar = document.getElementById('btn');
+    pagar.disabled = true;
+    if (validar1 == true && validar2 == true && validar3 == true) {
+      pagar.disabled = false;
+    }
+  }
   useEffect(() => {
     if (refresh) {
-
+      comprobar()
       setRefresh(false);
 
     };
 
 
 
-  }, [refresh, setRows, rows, setRows1, rows1, setRows1, rows1])
+  }, [refresh, setRows, rows, validar1, setValidar1, setRows1, rows1, setRows1, rows1])
+
   const aumentar = () => {
     setRefresh(true)
     rows.push("Hola")
@@ -42,9 +56,22 @@ const Inicio = () => {
     setRefresh(true)
     rows2.pop()
   }
-
+  const grafico1 = () => {
+    document.getElementById("Check1").style.display = "block";
+    setValidar1(true)
+    setRefresh(true)
+  }
+  const grafico2 = () => {
+    document.getElementById("Check2").style.display = "block";
+    setValidar2(true)
+    setRefresh(true)
+  }
+  const grafico3 = () => {
+    document.getElementById("Check3").style.display = "block";
+    setValidar3(true)
+    setRefresh(true)
+  }
   const irgrafico = () => {
-
     navigate("/graficoGeneracionDeResiduos")
   }
   const addmore3 = rows2.map(() => {
@@ -98,7 +125,7 @@ const Inicio = () => {
     <>
       <br />
       <div className="d-flex justify-content-center align-items-center">
-        <img src={require('../Graficos/Logo.png')} width="90" height="90" />
+        <img src={require('../Graficos/Logo.png')} width="90" height="90" /> {/*Acá se sube la imagen con el gráfico*/}
         <h1>GreenTech</h1>
 
 
@@ -107,17 +134,17 @@ const Inicio = () => {
       <div className="d-flex justify-content-center align-items-center" ><h3>Volúmenes de generación de residuos en Costa Rica </h3></div>
       <hr />
       <div style={{
-        margin: "auto 250px"
+        margin: "auto 150px"
       }}>
 
         <div class="row g-3 align-items-center " >
           <div class="col-auto" tyle={{
-            margin: "auto 80px"
+            margin: "auto 50px"
           }}>
 
           </div>
           <div className="col-auto" style={{
-            margin: "auto 75px"
+            margin: "auto 50px"
           }}>
             <label for="inputPassword6" class="col-form-label"></label>
           </div>
@@ -135,7 +162,7 @@ const Inicio = () => {
         </div>
       </div>
       <div style={{
-        margin: "auto 450px"
+        margin: "auto 300px"
       }}>
 
         <div class="row g-3 align-items-center " >
@@ -160,10 +187,17 @@ const Inicio = () => {
 
           <div className="col-auto">
             <div class="col-auto">
-              <button type="button" class="btn btn-light">Procesar</button>
+              <button type="button" class="btn btn-light" onClick={grafico1}>Procesar</button>
             </div>
           </div>
-
+          <div className="col-auto">
+            <span class="btn btn-success btn-file">
+              Subir archivo excel <input type="file" onChange={grafico1} />
+            </span>
+          </div>
+          <div className="col-auto">
+            <p id="Check1" style={{ display: "none" }}><FontAwesomeIcon icon={faCheck} size="lg" color="green" /></p>
+          </div>
           {annidir}
 
         </div>
@@ -176,7 +210,7 @@ const Inicio = () => {
       </div>
       <hr></hr>
       <div style={{
-        margin: "auto 200px"
+        margin: "auto 100px"
       }}>
 
         <div class="row g-3 align-items-center " >
@@ -230,8 +264,16 @@ const Inicio = () => {
 
           <div className="col-auto">
             <div class="col-auto">
-              <button type="button" class="btn btn-light">Procesar</button>
+              <button type="button" class="btn btn-light" onClick={grafico2}>Procesar</button>
             </div>
+          </div>
+          <div className="col-auto">
+            <span class="btn btn-success btn-file">
+              Subir archivo excel <input type="file" onChange={grafico2} />
+            </span>
+          </div>
+          <div className="col-auto">
+            <p id="Check2" style={{ display: "none" }}><FontAwesomeIcon icon={faCheck} size="lg" color="green" /></p>
           </div>
           {addmore2}
         </div>
@@ -242,7 +284,7 @@ const Inicio = () => {
 
 
       <div style={{
-        margin: "auto 250px"
+        margin: "auto 100px"
       }}>
 
         <div class="row g-3 align-items-center " >
@@ -270,7 +312,7 @@ const Inicio = () => {
         </div>
       </div>
       <div style={{
-        margin: "auto 450px"
+        margin: "auto 300px"
       }}>
 
         <div class="row g-3 align-items-center " >
@@ -294,17 +336,26 @@ const Inicio = () => {
 
           <div className="col-auto">
             <div class="col-auto">
-              <button type="button" class="btn btn-light">Procesar</button>
+              <button type="button" class="btn btn-light" onClick={grafico3}>Procesar</button>
             </div>
           </div>
+          <div className="col-auto">
+            <span class="btn btn-success btn-file">
+              Subir archivo excel <input type="file" onChange={grafico3} />
+            </span>
+          </div>
+          <div className="col-auto">
+            <p id="Check3" style={{ display: "none" }}><FontAwesomeIcon icon={faCheck} size="lg" color="green" /></p>
+          </div>
         </div>
+
         <div>
           {addmore3}
         </div>
       </div>
       <hr></hr>
       <div className="d-flex justify-content-center align-items-center" >
-        <button type="button" class="btn btn-light" onClick={irgrafico}>Generar gráficos</button>
+        <button id="btn" type="button" class="btn btn-light" onClick={irgrafico} >Generar gráficos</button>
       </div>
     </>
   );
