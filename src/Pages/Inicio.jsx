@@ -131,7 +131,7 @@ const Inicio = () => {
 
       </div>
       <hr />
-      <div className="d-flex justify-content-center align-items-center" ><h3>Volúmenes de generación de residuos en Costa Rica </h3></div>
+      <div className="d-flex justify-content-center align-items-center" ><h3>Volúmenes de generación de residuos electrónicos en Costa Rica </h3></div>
       <hr />
       <div style={{
         margin: "auto 150px"

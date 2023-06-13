@@ -34,10 +34,7 @@ const GraficosArtZonaUrbana = () => {
                   </p>
 
                 </div>
-                <div class="col-3  p-3">
-                  <p class="text-start"><button type="button" class="btn btn-light" onClick={siguiente}>Siguiente</button></p>
-
-                </div>
+              
               </div>
             </div>
           </div>

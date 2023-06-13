@@ -1,6 +1,6 @@
 .btn-file {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
 }
 .btn-file input[type=file] {
     position: absolute;
