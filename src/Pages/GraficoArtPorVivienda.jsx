@@ -44,6 +44,16 @@ const siguiente =()=>{
           </div>
           <div class="col-3  p-3 ">
             <h3>Observaciones:</h3>
+
+              <li>En esta gráfica se observa un pronóstico por artefactos totales en la 
+                zona urbana del país, del cual claramente se nota cuáles artefactos tecnológicos 
+                tendrán un crecimiento exponencial considerable: teléfono celular, televisor y 
+                servicio de internet en las viviendas. Para el año 2027 estos dispositivos 
+                tendrán un rango de diferencia mínimo, manteniendo así la tendencia de crecimiento simultáneamente. 
+                A diferencia del fax o teléfono residencial se nota un descenso en cada año al punto de llegar a menos "5000" unidades,
+                 aquí es importante mencionar que a pesar de la línea en cero que sigue en la gráfica,
+                 este comportamiento se debe a la poca o casi inexistente cantidad de fax que hay por vivienda en el país.</li>
+          
           </div>
         </div>
       </div>
