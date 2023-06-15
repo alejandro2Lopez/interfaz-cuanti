@@ -2,15 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const GraficoArtVivienda = () => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const regresar= () => {
-  navigate("/graficoGeneracionDeResiduos")
+  const regresar = () => {
+    navigate("/graficoGeneracionDeResiduos")
 
-}
-const siguiente =()=>{
-  navigate("/graficoArtefactosPorZonaUrbana")
-}
+  }
+  const siguiente = () => {
+    navigate("/graficoArtefactosPorZonaUrbana")
+  }
   return (
     <>
       <br />
@@ -23,7 +23,7 @@ const siguiente =()=>{
       <hr />
       <div class="container">
         <div class="row">
-          <div class="col-sm-9 bg p-3">
+          <div class="col-sm-8 bg p-3">
             <div className="d-flex justify-content-center align-items-center">
               <img src={require('../Graficos/GraficoTotal.jpeg')} width="80%" height="80%" />
             </div>
@@ -36,24 +36,24 @@ const siguiente =()=>{
 
                 </div>
                 <div class="col-3  p-3">
-                <p class="text-start"><button type="button" class="btn btn-light" onClick={siguiente}>Siguiente</button></p>
-                  
+                  <p class="text-start"><button type="button" class="btn btn-light" onClick={siguiente}>Siguiente</button></p>
+
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-3  p-3 ">
+          <div class="col-4  p-3 ">
             <h3>Observaciones:</h3>
 
-              <li>En esta gráfica se observa un pronóstico por artefactos totales en la 
-                zona urbana del país, del cual claramente se nota cuáles artefactos tecnológicos 
-                tendrán un crecimiento exponencial considerable: teléfono celular, televisor y 
-                servicio de internet en las viviendas. Para el año 2027 estos dispositivos 
-                tendrán un rango de diferencia mínimo, manteniendo así la tendencia de crecimiento simultáneamente. 
-                A diferencia del fax o teléfono residencial se nota un descenso en cada año al punto de llegar a menos "5000" unidades,
-                 aquí es importante mencionar que a pesar de la línea en cero que sigue en la gráfica,
-                 este comportamiento se debe a la poca o casi inexistente cantidad de fax que hay por vivienda en el país.</li>
-          
+            Con respecto a la grafica empleada, se observa detalladamente
+            el pronóstico sobre los artefactos totales por vivienda a partir del año 2022 a 2027,
+            se logra ver que a partir del año 2022 se incrementa el servicio de internet debido a
+            la situación post-pandemia que se experimentó a nivel mundial, asimismo se presenta
+            un aumento drástico de teléfonos celulares y televisores en contraste con el fax,
+            el cual va disminuyendo considerablemente cada año.
+            Es fundamental resaltar que ante mayor numero de dispositivos o artefactos tecnológicos hayan
+            en los hogares mayor será los desechos que se generarán a futuro, por lo cual se puede apreciar la estrecha relación de este grafico con el anterior, ya que en ambos se muestra un pronóstico del
+            comportamiento o tendencia que tendrán algunos dispositivos en los próximos años.
           </div>
         </div>
       </div>

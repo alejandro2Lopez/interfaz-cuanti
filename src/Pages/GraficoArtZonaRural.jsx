@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const GraficoResiduos = () => {
+const GraficosArtZonaRural = () => {
   const navigate = useNavigate();
 
   const regresar = () => {
-    navigate("/inicio")
+    navigate("/graficoArtefactosPorZonaUrbana")
   }
   const siguiente = () => {
-    navigate("/graficoArtefactosPorVivienda")
+    navigate("/analisisFinal")
   }
   return (
     <>
@@ -24,7 +24,7 @@ const GraficoResiduos = () => {
         <div class="row">
           <div class="col-sm-8 bg p-3">
             <div className="d-flex justify-content-center align-items-center">
-              <img src={require('../Graficos/GraResiduos.png')} width="80%" height="80%" />
+              <img src={require('../Graficos/GraficoZonaRural.png')} width="80%" height="80%" />
             </div>
             <div class="container">
               <div class="row">
@@ -41,21 +41,15 @@ const GraficoResiduos = () => {
               </div>
             </div>
           </div>
-          <div class="col-4  p-3 ">
+          <div class="col-4  p-1 ">
             <h3>Observaciones:</h3>
-            
-              Se puede apreciar con claridad los volúmenes de
-                generación de residuos electrónicos que tendría el
-                país entre los años 2022 a 2032, puntuando qué a
-                pesar de ser un pronostico a futuro, se puede ana
-                lizar el incremento significativo de desechos 
-                electrónicos del año 2032, ya que con lo que resp
-                ecta al año actual 2023 se puede decir con certeza que
-                aumentará la contaminación tecnológica, por lo cual s
-                e sugiere considerar acciones que mitiguen estas futuras proyecciones.
-
-            
-
+            Se puede apreciar también el aumento significativo en el servicio de internet
+            como ocurrió en la zona urbana, del mismo modo el teléfono celular ha mostrado
+            un crecimiento mínimo en contraste con la zona urbana que duplica esta cantidad.
+            Sin embargo, se logra visualizar que el crecimiento de televisores en cada año
+            se mantiene constante, es decir no existe un aumento para este pronostico. De igual forma, la televisión de cable se
+            mantiene por debajo de los televisores, esto debido en parte por los limitados servicios que se ofrecen en dicha zona.
+     
           </div>
         </div>
       </div>
@@ -63,4 +57,4 @@ const GraficoResiduos = () => {
   );
 }
 
-export default GraficoResiduos;
+export default GraficosArtZonaRural;
