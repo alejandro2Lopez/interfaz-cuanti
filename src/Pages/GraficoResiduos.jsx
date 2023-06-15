@@ -43,19 +43,23 @@ const GraficoResiduos = () => {
           </div>
           <div class="col-4  p-3 ">
             <h3>Observaciones:</h3>
-            
+
+            <div>
+              B1 (Slope)= 1,61, lo que indica que el crecimiento por resiudos electrónicos va a ser gradual y sostenido durante los próximos años.
+            </div>
+            <div>
               Se puede apreciar con claridad los volúmenes de
-                generación de residuos electrónicos que tendría el
-                país entre los años 2022 a 2032, puntuando qué a
-                pesar de ser un pronostico a futuro, se puede ana
-                lizar el incremento significativo de desechos 
-                electrónicos del año 2032, ya que con lo que resp
-                ecta al año actual 2023 se puede decir con certeza que
-                aumentará la contaminación tecnológica, por lo cual s
-                e sugiere considerar acciones que mitiguen estas futuras proyecciones.
+              generación de residuos electrónicos que tendría el
+              país entre los años 2022 a 2032, puntuando qué a
+              pesar de ser un pronostico a futuro, se puede ana
+              lizar el incremento significativo de desechos
+              electrónicos del año 2032, ya que con lo que resp
+              ecta al año actual 2023 se puede decir con certeza que
+              aumentará la contaminación tecnológica, por lo cual s
+              e sugiere considerar acciones que mitiguen estas futuras proyecciones.
 
-            
 
+            </div>
           </div>
         </div>
       </div>

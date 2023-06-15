@@ -70,7 +70,10 @@ const AnalisisFinalF = () => {
           </div>
 
 
-
+          <div>
+            *Nota:
+            En los análisis realizados, solo se toman en cuenta dispositivos de TI y solo se cuenta un dispositivo por hogar.
+          </div>
         </div>
 
 

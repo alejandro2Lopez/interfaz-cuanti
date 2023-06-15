@@ -27,7 +27,7 @@ const AnalisisFinal = () => {
       <div class="container">
 
         <div class="row " >
-        
+
           <div className="col-sm-4  p-2">
 
             <div></div>
@@ -68,6 +68,10 @@ const AnalisisFinal = () => {
 
 
 
+          <div>
+            *Nota:
+            En los análisis realizados, solo se toman en cuenta dispositivos de TI y solo se cuenta un dispositivo por hogar.
+          </div>
         </div>
 
 
