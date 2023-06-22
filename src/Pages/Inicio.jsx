@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faSubtract, faCheck } from '@fortawesome/free-solid-svg-icons'
-
+import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 import '../assets/buttonFile.css'
 const Inicio = () => {
@@ -60,16 +60,38 @@ const Inicio = () => {
     document.getElementById("Check1").style.display = "block";
     setValidar1(true)
     setRefresh(true)
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Se ha procesado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   const grafico2 = () => {
     document.getElementById("Check2").style.display = "block";
     setValidar2(true)
+
     setRefresh(true)
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Se ha procesado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   const grafico3 = () => {
     document.getElementById("Check3").style.display = "block";
     setValidar3(true)
     setRefresh(true)
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Se ha procesado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   const irgrafico = () => {
     navigate("/graficoGeneracionDeResiduos")
